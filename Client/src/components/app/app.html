@@ -1,0 +1,64 @@
+<div id="app-container">
+    <template>
+        <VApp>
+            <HeaderComponent
+                :addMemo="addMemo"
+            />
+            <div class="flex justify-start">
+                <VRow>
+                    <VCol cols="3">
+                        <MemoComponent
+                                v-for="(memo, index) in memos.filter(m => m.categories.includes('domov'))"
+                                :key="index"
+                                :id="memo.id"
+                                :title="memo.title"
+                                :date="memo.date"
+                                :text="memo.text"
+                                :author="memo.author"
+                                :likes="memo.likes"
+                                :image="memo.image"
+                                :addLike="addLike"
+                                :removeMemo="removeMemo"
+                        />
+                    </VCol>
+                    <VCol cols="3">
+                        <MemoComponent
+                                v-for="(memo, index) in memos.filter((m) => m.categories.includes('zábava'))"
+                                :key="index"
+                                :id="memo.id"
+                                :title="memo.title"
+                                :date="memo.date"
+                                :text="memo.text"
+                                :author="memo.author"
+                                :likes="memo.likes"
+                                :image="memo.image"
+                                :addLike="addLike"
+                                :removeMemo="removeMemo"
+                        />
+                    </VCol>
+                    <VCol cols="3">
+                        <MemoComponent
+                                v-for="(memo, index) in memos.sort((a, b) => {
+                                    if (a.likes < b.likes) return 1;
+                                    if (b.likes < a.likes) return -1;
+                                    return 0;
+                                })"
+                                :key="index"
+                                :id="memo.id"
+                                :title="memo.title"
+                                :date="memo.date"
+                                :text="memo.text"
+                                :author="memo.author"
+                                :likes="memo.likes"
+                                :image="memo.image"
+                                :addLike="addLike"
+                                :removeMemo="removeMemo"
+                        />
+                    </VCol>
+                    <VCol cols="3"></VCol>
+                </VRow>
+            </div>
+            <FooterComponent />
+        </VApp>
+    </template>
+</div>

@@ -1,0 +1,31 @@
+<VCard>
+    <VCardTitle class="modal-head">
+        Pridať nové memo
+    </VCardTitle>
+    <VCardText>
+        <VTextField v-model="title" label="Nadpis" color="#e20074" />
+        <VTextField v-model=autor  label="Autor" color="#e20074" />
+        <VTextField v-model=image  label="Adresa obrázku" color="#e20074" />
+        <VTextarea v-model=description  label="Text" color="#e20074" />
+        <VSelect v-model=category label="Kategória" :items=categories color="#EA0A8E" value="domov"/>
+    </VCardText>
+    <VDivider></VDivider>
+    <VCardActions>
+        <VBtn
+                color="#e20074"
+                @click="cancel"
+                text
+        >
+            Zrušiť
+        </VBtn>
+        <VDivider></VDivider>
+        <VBtn
+                color="#e20074"
+                primary
+                dark
+                @click="submit"
+        >
+            Pridať
+        </VBtn>
+    </VCardActions>
+</VCard>

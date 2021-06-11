@@ -1,0 +1,23 @@
+  
+#modal-overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    z-index: 100;
+}
+
+
+#modal-container {
+    width: 400px;
+    min-height: 500px;
+    top: 5%;
+    left: calc(50% - 200px);
+    position: fixed;
+    background-color: white;
+    border: 5px solid #e20074;
+}
+
+.modal-head {
+    background-color: #e20074;
+    color: white;
+}

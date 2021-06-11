@@ -1,0 +1,29 @@
+#footer-container {
+  background: #e20074;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+}
+
+@font-face {
+  font-family: teleneoweb-bold;
+  src: url(../../assets/fonts/TeleNeoWeb-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: teleneoweb;
+  src: url(../../assets/fonts/TeleNeoWeb-Regular.woff);
+}
+
+.teleneoweb-bold {
+  font-family: "teleneoweb-bold", "Roboto", sans-serif;
+}
+
+.teleneoweb {
+  font-family: "teleneoweb", "Roboto", sans-serif;
+}

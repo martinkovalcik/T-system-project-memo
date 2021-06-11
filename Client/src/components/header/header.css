@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.button-add-memo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 50px;
+  border-radius: 100px;
+  background-color: white;
+  color: #e20074;
+}
+
+.menu-header {
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: teleneoweb-bold;
+  src: url(../../assets/fonts/TeleNeoWeb-Bold.woff);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: teleneoweb;
+  src: url(../../assets/fonts/TeleNeoWeb-Regular.woff);
+}
+
+.teleneoweb-bold {
+  font-family: "teleneoweb-bold", "Roboto", sans-serif;
+}
+
+.teleneoweb {
+  font-family: "teleneoweb", "Roboto", sans-serif;
+}

@@ -1,0 +1,37 @@
+<div class="z-10">
+
+
+    <div class="bg-pink-600">
+        <div class="flex flex-row justify-space-around items-center py-4">
+            <div class="text-white">
+                <h1 class="teleneoweb text-xl">
+                    Domov
+                </h1>
+            </div>
+            <div class="text-white">
+                <h1 class="teleneoweb text-xl">
+                    Zábava  
+                </h1>
+            </div>
+            <div class="text-white">
+                <h1 class="teleneoweb text-xl">
+                    TOP 10
+                </h1>
+            </div>
+            <div>
+                <div class="flex items-center">
+                        <VRow>
+                            <VCol cols="">
+                                <VDialog v-model="this.showModal" width="500">
+                                    <template v-slot:activator="{ on, attrs }">
+                                        <VBtn class="button-add-memo" @click="openModal" v-bind="attrs" v-on="on" elevation="2" icon>+</VBtn>
+                                    </template>
+                                    <Modal :closeModal="closeModal" :addNew="addNew" />
+                                </VDialog>
+                            </VCol>
+                        </VRow>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

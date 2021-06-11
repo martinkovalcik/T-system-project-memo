@@ -1,0 +1,85 @@
+<div class="border-4 border-pink-600 rounded-lg m-5">
+    <div class="flex flex-col">
+        <div class="flex flex-row justify-space-between px-2 bg-pink-600  items-center rounded-t-sm">
+            <div class="md:w-20 lg:w-32 xl:40 break-words text-center">
+                <span class="text-white capitalize teleneoweb-bold">
+                    {{ this.$props.title }}
+                </span>
+            </div>
+            <div class="items-center pb-1">
+                <button class="h-6 w-6 text-sm text-white"
+                        @click="remove"
+                        elevation="2"
+                        icon
+                        small
+                >X
+            </button>
+            </div>
+        </div>
+        <div>
+            <img class="memo-image" :src="this.$props.image" alt="" />
+        </div>
+        <div class="w-auto break-words text-center rounded-b-md">
+            <span class="px-1 capitalize teleneoweb rounded-b-md">
+                {{ this.$props.text }}
+            </span>
+        </div>
+        <div class="flex flex-col justify-center lg:justify-start px-2 border-t-4 border-pink-600 bg-pink-600">
+            <div class="lg:text-left lg:pr-2 w-auto break-words text-center">
+                <span class="text-white teleneoweb-bold">
+                    {{ this.$props.author }}
+                </span>
+            </div>
+            <div class="text-center teleneoweb">
+                {{ this.moment(this.$props.date).format('DD.MM.YYYY HH:mm') }}
+            </div>
+            <div class="flex items-center justify-end cursor-pointer teleneoweb-bold">
+                {{ this.$props.likes }}
+                <img @click=this.add class="h-4 w-4" src="https://pic.onlinewebfonts.com/svg/img_302738.png" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+
+<div class="memo-container">
+    <div class="memo-image-container">
+        <VRow>
+            <VCol cols="12" sm="9" md="9" lg="10" xl="11">
+                <div class="memo-title">{{ this.$props.title }}</div>
+            </VCol>
+            <VCol cols="12" sm="3" md="2" lg="2" xl="1">
+                <VBtn
+                        id="button-remove-memo"
+                        @click="remove"
+                        elevation="2"
+                        icon
+                        small
+                >X</VBtn>
+            </VCol>
+        </VRow>
+        <img class="memo-image" :src="this.$props.image" alt=""/>
+    </div>
+    <div class="memo-text-container">
+        {{ this.$props.text }}
+    </div>
+    <div class="memo-footer">
+        <VRow>
+            <VCol cols="3" class="memo-author">
+                {{ this.$props.author }}
+            </VCol>
+            <VCol cols="6">
+                {{ this.moment(this.$props.date).format('DD.MM.YYYY HH:mm') }}
+            </VCol>
+            <VCol cols="1"/>
+            <VCol cols="2" class="memo-likes">
+                {{ this.$props.likes }}
+                <img @click=this.add  class="memo-like" src="https://pic.onlinewebfonts.com/svg/img_302738.png" alt=""/>
+            </VCol>
+        </VRow>
+    </div>
+</div>
+-->
